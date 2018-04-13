@@ -163,6 +163,11 @@ HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
 # 指定搜索结果(每页的条数)
 HAYSTACK_SEARCH_RESULTS_PER_PAGE = 6
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'collect_static')
+
+
+ALIPAY_URL='https://openapi.alipaydev.com/gateway.do'
+
 
 
 
