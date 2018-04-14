@@ -50,9 +50,7 @@ def register_handle(request):
 	serializer = Serializer(settings.SECRET_KEY, 3600)
 	token = serializer.dumps({'confirm': passport.id})
 	token = token.decode()
-
-	# send_mail('尚硅谷书城用户激活', '', settings.EMAIL_FROM, [email],
-	# 		  html_message='<a href="http://127.0.0.1:8000/user/active/%s/">http://127.0.0.1:8000/user/active/</a>' % token)
+	send_mail('书城激活','',settings.EMAIL_FROM,[email],html_message='<a href="http://127.0.0.1:8000/user/active/%s/"http://127.0.0.1:8000/user/active/</a>'%token)
 
 	return redirect(reverse('books:index'))
 

@@ -141,10 +141,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
 # 配置邮件相关参数
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.163.com'
-EMAIL_PORT = 25
+# EMAIL_PORT = 25
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
 EMAIL_HOST_USER = '13513545670.com'
 EMAIL_HOST_PASSWORD = 'guoxiaoyu135'
-EMAIL_FROM = 'shangguigu<13513545670@163.com>'
+EMAIL_FROM = 'guoxiaoyu<13513545670@163.com>'
 
 # 全文检索配置
 HAYSTACK_CONNECTIONS = {
